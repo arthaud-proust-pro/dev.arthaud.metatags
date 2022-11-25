@@ -88,6 +88,7 @@ document.addEventListener('alpine:init', () => {
             }
         },
 
+
         html: "",
 
         init() {
@@ -106,7 +107,7 @@ document.addEventListener('alpine:init', () => {
         copyContent() {
             navigator.permissions.query({name: "clipboard-write"}).then(result => {
                 if (result.state == "granted" || result.state == "prompt") {
-                    navigator.clipboard.writeText(this.html).then(()=>{
+                    navigator.clipboard.writeText(getGeneratedHtml(this.form)).then(()=>{
                         this.copied = true;
                         this.copyTimeout();
                     }, function() {

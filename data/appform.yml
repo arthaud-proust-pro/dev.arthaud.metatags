@@ -45,3 +45,4 @@ sections:
       - model: themeColor
         label: 'Couleur du thème'
         placeholder: '#ffffff'
+
