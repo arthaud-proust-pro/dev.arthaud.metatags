@@ -1,0 +1,47 @@
+sections:
+  - section: site
+    title: Site
+    inputs:
+      - model: title
+        label: Titre
+        placeholder: "Use Metatags"
+      - model: url
+        label: Url
+        placeholder: 'https://metatags.arthaud.dev/'
+      - model: lang
+        label: Langue
+        placeholder: "fr"
+  - section: page
+    title: Page
+    inputs:
+      - model: title
+        label: Nom
+        placeholder: 'Générer des meta-tags'
+      - model: url
+        label: Url
+        placeholder: 'https://metatags.arthaud.dev/app'
+      - model: desc
+        label: Description
+        placeholder: 'Créez simplement vos balises Meta. Entrez les informations de votre site et récupérez le code html'
+      - model: heroUrl
+        label: "Url d'image de prévisualisation"
+        placeholder: 'https://metatags.arthaud.dev/assets/img/hero.png'
+  - section: more
+    title: Plus
+    inputs:
+      - model: robots
+        label: Robots
+        placeholder: all
+        info: 'https://developers.google.com/search/docs/advanced/robots/robots_meta_tag?hl=fr'
+      - model: subject
+        label: Sujet
+        placeholder: Seo
+      - model: author
+        label: Auteur
+        placeholder: 'Arthaud Proust'
+      - model: owner
+        label: Propriétaire
+        placeholder: 'Arthaud Proust'
+      - model: themeColor
+        label: 'Couleur du thème'
+        placeholder: '#ffffff'

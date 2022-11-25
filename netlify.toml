@@ -1,0 +1,21 @@
+[build]
+publish = "public"
+command = "npm run build"
+
+[[redirects]]
+  from = "https://coachbyco.netlify.com/*"
+  to = "https://coachbyco.fr/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://coachbyco.netlify.com/*"
+  to = "http://coachbyco.fr/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://coachbyco.fr/*"
+  to = "https://coachbyco.fr/:splat"
+  status = 301
+  force = true

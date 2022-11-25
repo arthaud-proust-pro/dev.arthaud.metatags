@@ -1,0 +1,30 @@
+languageCode: 'fr'
+baseURL: https://metatags.arthaud.dev
+removePathAccents: true
+
+params:
+  contact:
+    email:
+      content: proust@arthaud.dev
+      prefix: "mailto:"
+  seo:
+    author: Arthaud Proust
+    title: Use Metatags - Améliorez votre SEO
+    desc: "Coach sportif à Bordeaux, je t'aide à transformer ton corps et atteindre tes objectifs pour te sentir mieux et vivre sans contrainte."
+    subject: "seo"
+    url: https://metatags.arthaud.dev
+    hero: /sprites/hero-min.jpg
+    logo: /sprites/logo-min.png
+    links:
+      facebook: https://www.facebook.com/coachbyco
+      instagram: https://www.instagram.com/coach_by_co
+      linkedin: https://www.linkedin.com/in/corentin-chevalier-672322253/
+
+taxonomies:
+
+menu:
+  main:
+    - name: Démarrer
+      pre: start
+      url: "/app"
+      weight: 1

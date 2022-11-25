@@ -1,0 +1,13 @@
+<div class="flex flex-col items-start w-full">
+
+    <label>{{ .label }}</label>
+
+    <input
+            class="w-full border-2 text-primary bg-secondary py-2 px-3"
+            x-model="{{ .model }}" placeholder="{{ .placeholder }}" type="text" />
+
+    {{ with .info }}
+        <a class="mt-1 text-label link" href="{{ . }}" target="_blank">Informations</a>
+    {{ end }}
+
+</div>
