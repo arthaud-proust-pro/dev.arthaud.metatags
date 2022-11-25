@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head prefix="og: http://ogp.me/ns#">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Hind:wght@300;500;700&family=Montserrat:wght@200;600;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;600&family=Montserrat:wght@200;600;800&display=swap"></noscript><script src="/js/main.js"></script>
+<script defer src="https://unpkg.com/alpinejs@3.10.5/dist/cdn.min.js"></script><link rel="preload" href="/css/output/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/css/output/styles.css"></noscript>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/an-old-hope.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+
+    
+
+    
+        <meta name="robots" content="all">
+    
+
+    
+
+<meta name="author" content="Arthaud Proust">
+<meta name="owner" content="Arthaud Proust">
+<meta name="language" content="fr">
+<meta http-equiv="content-language" content="fr" />
+
+
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"Organization","address":"Bordeaux","logo":"https://metatags.arthaud.dev/sprites/logo-min.png","name":"Arthaud Proust","sameAs":["https://www.facebook.com/coachbyco","https://www.instagram.com/coach_by_co","https://www.linkedin.com/in/corentin-chevalier-672322253/"],"url":"https://metatags.arthaud.dev"}
+</script>
+
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+
+<link rel="apple-touch-icon" href="https://metatags.arthaud.dev/sprites/apple-touch-icon.png" />
+<link rel="apple-touch-icon" sizes="57x57" href="https://metatags.arthaud.dev/sprites/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="https://metatags.arthaud.dev/sprites/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="https://metatags.arthaud.dev/sprites/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="https://metatags.arthaud.dev/sprites/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="https://metatags.arthaud.dev/sprites/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="https://metatags.arthaud.dev/sprites/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="https://metatags.arthaud.dev/sprites/apple-touch-icon-152x152.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="https://metatags.arthaud.dev/sprites/apple-touch-icon-180x180.png" />
+
+<link rel="shortcut icon" href="https://metatags.arthaud.dev/sprites/favicon.ico">
+
+
+<link rel="canonical" href="https://metatags.arthaud.dev/app/" />
+<meta property="twitter:site" content="https://metatags.arthaud.dev">
+<meta property="twitter:url" content="https://metatags.arthaud.dev/app/">
+<meta property="og:url" content="https://metatags.arthaud.dev/app/" />
+
+
+<meta name="url" content="https://metatags.arthaud.dev">
+<meta name="identifier-URL" content="https://metatags.arthaud.dev">
+
+
+<meta name="subject" content="seo">
+<meta name="theme-color" content="#000">
+<meta property="og:type" content="website" />
+
+<meta property="og:site_name" content="Arthaud Proust" />
+<meta property="og:locale" content="fr" />
+<meta name="twitter:card" content="summary_large_image" />
+
+
+
+
+
+
+
+
+    
+        
+        <meta name="twitter:image" content="https://metatags.arthaud.dev/sprites/hero-min.jpg" />
+        <meta property="og:image" content="https://metatags.arthaud.dev/sprites/hero-min.jpg" />
+    
+
+    
+        
+        
+        
+        
+        <title>Créez vos balises</title>
+        <meta name="twitter:title" content="Créez vos balises" />
+        <meta property="og:title" content="Créez vos balises" />
+        <meta name="apple-mobile-web-app-title" content="Créez vos balises" />
+    
+
+    
+        
+        
+        <meta name="description" content="Coach sportif à Bordeaux, je t&#39;aide à transformer ton corps et atteindre tes objectifs pour te sentir mieux et vivre sans contrainte." />
+        <meta property="og:description" content="Coach sportif à Bordeaux, je t&#39;aide à transformer ton corps et atteindre tes objectifs pour te sentir mieux et vivre sans contrainte." />
+        <meta name="twitter:description" content="Coach sportif à Bordeaux, je t&#39;aide à transformer ton corps et atteindre tes objectifs pour te sentir mieux et vivre sans contrainte." />
+    
+</head>
+<body class="bg-secondary text-primary text-xl">
+
+<main class="grid grid-cols-2 h-screen overflow-y-hidden" x-data="appForm">
+    <section class="overflow-y-auto border-r-2 border-primary flex flex-col">
+        <nav class="p-8 flex flex-row items items-center justify-between">
+            <a class="link" href="/">Retour</a>
+            <button class="btn" @click="copyContent">
+    <span x-show="!copied">Copier le code HTML</span>
+    <span x-show="copied">Copié !</span>
+</button>
+
+        </nav>
+
+        <div class="overflow-y-auto flex flex-col p-8 gap-4">
+            
+                
+                <div class="mb-16 space-y-6">
+                    <h3 class="text-h3">Site</h3>
+
+                    
+                        <div class="flex flex-col items-start w-full">
+
+    <label>Titre</label>
+
+    <input
+            class="w-full border-2 text-primary bg-secondary py-2 px-3"
+            x-model="form.site.title" placeholder="Use Metatags" type="text" />
+
+    
+
+</div>
+
+                    
+                        <div class="flex flex-col items-start w-full">
+
+    <label>Url</label>
+
+    <input
+            class="w-full border-2 text-primary bg-secondary py-2 px-3"
+            x-model="form.site.url" placeholder="https://metatags.arthaud.dev/" type="text" />
+
+    
+
+</div>
+
+                    
+                        <div class="flex flex-col items-start w-full">
+
+    <label>Langue</label>
+
+    <input
+            class="w-full border-2 text-primary bg-secondary py-2 px-3"
+            x-model="form.site.lang" placeholder="fr" type="text" />
+
+    
+
+</div>
+
+                    
+                </div>
+            
+                
+                <div class="mb-16 space-y-6">
+                    <h3 class="text-h3">Page</h3>
+
+                    
+                        <div class="flex flex-col items-start w-full">
+
+    <label>Nom</label>
+
+    <input
+            class="w-full border-2 text-primary bg-secondary py-2 px-3"
+            x-model="form.page.title" placeholder="Générer des meta-tags" type="text" />
+
+    
+
+</div>
+
+                    
+                        <div class="flex flex-col items-start w-full">
+
+    <label>Url</label>
+
+    <input
+            class="w-full border-2 text-primary bg-secondary py-2 px-3"
+            x-model="form.page.url" placeholder="https://metatags.arthaud.dev/app" type="text" />
+
+    
+
+</div>
+
+                    
+                        <div class="flex flex-col items-start w-full">
+
+    <label>Description</label>
+
+    <input
+            class="w-full border-2 text-primary bg-secondary py-2 px-3"
+            x-model="form.page.desc" placeholder="Créez simplement vos balises Meta. Entrez les informations de votre site et récupérez le code html" type="text" />
+
+    
+
+</div>
+
+                    
+                        <div class="flex flex-col items-start w-full">
+
+    <label>Url d&#39;image de prévisualisation</label>
+
+    <input
+            class="w-full border-2 text-primary bg-secondary py-2 px-3"
+            x-model="form.page.heroUrl" placeholder="https://metatags.arthaud.dev/assets/img/hero.png" type="text" />
+
+    
+
+</div>
+
+                    
+                </div>
+            
+                
+                <div class="mb-16 space-y-6">
+                    <h3 class="text-h3">Plus</h3>
+
+                    
+                        <div class="flex flex-col items-start w-full">
+
+    <label>Robots</label>
+
+    <input
+            class="w-full border-2 text-primary bg-secondary py-2 px-3"
+            x-model="form.more.robots" placeholder="all" type="text" />
+
+    
+        <a class="mt-1 text-label link" href="https://developers.google.com/search/docs/advanced/robots/robots_meta_tag?hl=fr" target="_blank">Informations</a>
+    
+
+</div>
+
+                    
+                        <div class="flex flex-col items-start w-full">
+
+    <label>Sujet</label>
+
+    <input
+            class="w-full border-2 text-primary bg-secondary py-2 px-3"
+            x-model="form.more.subject" placeholder="Seo" type="text" />
+
+    
+
+</div>
+
+                    
+                        <div class="flex flex-col items-start w-full">
+
+    <label>Auteur</label>
+
+    <input
+            class="w-full border-2 text-primary bg-secondary py-2 px-3"
+            x-model="form.more.author" placeholder="Arthaud Proust" type="text" />
+
+    
+
+</div>
+
+                    
+                        <div class="flex flex-col items-start w-full">
+
+    <label>Propriétaire</label>
+
+    <input
+            class="w-full border-2 text-primary bg-secondary py-2 px-3"
+            x-model="form.more.owner" placeholder="Arthaud Proust" type="text" />
+
+    
+
+</div>
+
+                    
+                        <div class="flex flex-col items-start w-full">
+
+    <label>Couleur du thème</label>
+
+    <input
+            class="w-full border-2 text-primary bg-secondary py-2 px-3"
+            x-model="form.more.themeColor" placeholder="#ffffff" type="text" />
+
+    
+
+</div>
+
+                    
+                </div>
+            
+        </div>
+    </section>
+
+    <section class="relative overflow-y-auto p-8 text-base">
+        <pre class="overflow-x-scroll"><code class="language-html" x-html="html" id="code"></code></pre>
+    </section>
+</main>
+
+
+</body>
+</html>
