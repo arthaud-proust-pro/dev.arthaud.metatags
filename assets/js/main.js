@@ -64,6 +64,7 @@ function getGeneratedHtml(f) {
 
 document.addEventListener('alpine:init', () => {
     Alpine.data('appForm', () => ({
+        viewDisplayed: 'htmlCode',
         copied: false,
         copiedTimeout: 2,
 
@@ -97,6 +98,11 @@ document.addEventListener('alpine:init', () => {
             this.$watch('form', () => {
                 this.html = hljs.highlight(getGeneratedHtml(this.form), {language: 'html'}).value ;
             })
+        },
+
+        toggleView()
+        {
+          this.viewDisplayed = this.viewDisplayed === "htmlCode" ? "preview" : "htmlCode";
         },
 
         copyTimeout()

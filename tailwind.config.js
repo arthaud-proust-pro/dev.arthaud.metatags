@@ -6,6 +6,8 @@ module.exports = {
     "./content/**/*.html"
   ],
   theme: {
+    extends: {
+    },
     colors: {
        // primary: '#a4ce65',
       primary: '#d38b5e',

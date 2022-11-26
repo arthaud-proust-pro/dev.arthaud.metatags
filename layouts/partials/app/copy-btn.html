@@ -1,0 +1,10 @@
+<button class="btn in-row" @click="copyContent">
+    <span x-show="!copied" class="in-row">
+        Copier
+        {{ partial "icons/copy" }}
+    </span>
+    <span x-show="copied" class="in-row">
+        Copié
+        {{ partial "icons/check" }}
+    </span>
+</button>
