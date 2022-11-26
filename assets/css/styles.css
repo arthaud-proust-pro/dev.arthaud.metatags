@@ -6,6 +6,9 @@
 @tailwind variants;
 
 @layer base {
+    :focus, :focus-visible {
+        @apply outline-none outline-offset-4 outline-1 outline-primary ;
+    }
 }
 
 @layer components {
@@ -18,7 +21,7 @@
     }
 
     .text-h1 {
-        @apply text-5xl md:text-6xl font-display font-extrabold uppercase;
+        @apply text-5xl md:text-7xl font-display font-extrabold uppercase;
     }
 
     .text-h2 {
@@ -38,34 +41,29 @@
     }
 
     .text-cta {
-        @apply text-xl font-sans font-medium;
+        @apply text-xl font-sans font-light;
     }
 
     .text-label {
-        @apply text-base font-sans font-thin;
+        @apply text-base font-sans font-normal;
+    }
+
+    .in-row {
+        @apply flex flex-row items-center gap-2;
+    }
+
+    .in-row-inline {
+        @apply in-row inline-flex;
     }
 
     .btn {
-        @apply text-cta bg-primary text-secondary border-2 border-primary px-6 py-2;
+        @apply text-cta bg-primary text-secondary border border-primary px-5 py-3;
     }
     .btn:hover {
         @apply text-primary bg-secondary;
     }
 
     .link {
-        @apply relative;
-    }
-    .link::after {
-        content: '';
-        @apply absolute right-0 bottom-0 h-0.5 w-0 bg-primary;
-    }
-    .link:hover::after,
-    a:hover .link::after {
-        @apply w-full right-auto left-0;
-    }
-
-    .link-visible::before {
-        content: '';
-        @apply absolute right-0 bottom-0 w-full h-[1%] bg-primary;
+        @apply text-cta underline underline-offset-4 decoration-1;
     }
 }

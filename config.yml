@@ -24,7 +24,7 @@ taxonomies:
 
 menu:
   main:
-    - name: Démarrer
+    - name: Commencer
       pre: start
       url: "/app"
       weight: 1

@@ -1,6 +1,11 @@
-<footer class="border-t-2 border-primary text-label mt-32">
+<footer class="border-t text-body border-primary mt-32">
     <nav class="container flex flex-col items-start md:items-center py-16 gap-4">
         <a class="link" href="/mentions-legales">Mentions légales</a>
-        <a class="link text-primary" href="https://arthaudproust.fr" target="_blank">Réalisé par Arthaud Proust</a>
+        <span>
+            Réalisé par
+            {{ partial "external-link" (dict "text" "Arthaud Proust" "href" "https://arthaudproust.fr" ) }}
+            et
+            {{ partial "external-link" (dict "text" "Emma Guillaume" "href" "https://emmaguillaume.fr" ) }}
+        </span>
     </nav>
 </footer>

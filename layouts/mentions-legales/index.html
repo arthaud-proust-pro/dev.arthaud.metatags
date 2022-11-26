@@ -5,14 +5,23 @@
 {{ define "main" }}
 
 <div class="container grid-body flex flex-col gap-4">
-    <h1 class="text-h1 pt-24">Mentions légales</h1>
+
+    <p class="mt-24">
+        <a href="https://www.netlify.com/" class="link in-row-inline">
+            {{ partial "icons/arrow-left" }}
+            Retour
+        </a>
+    </p>
+
+
+    <h1 class="text-h1 ">Mentions légales</h1>
     
     <h2 class="text-h3 pt-8 text-primary">Propriétaire du site</h2>
     <p class="text-body">Arthaud Proust</p>
     <p class="text-body">{{ .Site.Params.contact.email.content }}</p>
 
     <h2 class="text-h3 pt-8 text-primary">Hébergement</h2>
-    <p class="text-body"><a href="https://www.netlify.com/" class="link link-visible">Société Netlify</a></p>
+    <p class="text-body"><a href="https://www.netlify.com/" class="link">Société Netlify</a></p>
     <p class="text-body">support@netlify.com</p>
 </div>
 

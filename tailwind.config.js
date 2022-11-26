@@ -7,10 +7,11 @@ module.exports = {
   ],
   theme: {
     colors: {
-      // primary: '#a4ce65',
-      // secondary: 'black',
-      primary: 'dodgerblue',
-      secondary: '#0d1829',
+       // primary: '#a4ce65',
+      primary: '#d38b5e',
+       secondary: 'black',
+      //primary: 'dodgerblue',
+      //secondary: '#0d1829',
     },
     fontFamily: {
       sans: ['Hind'],
