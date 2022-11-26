@@ -14,12 +14,10 @@
                     <h3 class="text-h3">{{ $section.title }}</h3>
 
                     {{ range $section.inputs }}
-                        {{ partial "input" (dict
-                            "label" .label
-                            "model" (printf "form.%s.%s" $section.section .model)
-                            "info" .info
-                            "placeholder" .placeholder
-                        )
+                        {{ partial "input" (dict 
+                                "section" $section
+                                "inputData" .
+                            ) 
                         }}
                     {{ end }}
                 </div>

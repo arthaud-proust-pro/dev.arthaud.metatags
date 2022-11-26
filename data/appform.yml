@@ -1,5 +1,5 @@
 sections:
-  - section: site
+  - name: site
     title: Site
     inputs:
       - model: title
@@ -11,7 +11,7 @@ sections:
       - model: lang
         label: Langue
         placeholder: "fr"
-  - section: page
+  - name: page
     title: Page
     inputs:
       - model: title
@@ -26,13 +26,13 @@ sections:
       - model: heroUrl
         label: "Url d'image de prévisualisation"
         placeholder: 'https://metatags.arthaud.dev/assets/img/hero.png'
-  - section: more
+  - name: more
     title: Plus
     inputs:
       - model: robots
         label: Robots
         placeholder: all
-        info: 'https://developers.google.com/search/docs/advanced/robots/robots_meta_tag?hl=fr'
+        link: 'https://developers.google.com/search/docs/advanced/robots/robots_meta_tag?hl=fr'
       - model: subject
         label: Sujet
         placeholder: Seo

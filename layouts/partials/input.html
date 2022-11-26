@@ -1,13 +1,23 @@
 <div class="flex flex-col items-start w-full">
 
-    <label>{{ .label }}</label>
+    <label>{{ .inputData.label }}</label>
 
-    <input
-            class="w-full border-2 text-primary bg-secondary py-2 px-3"
-            x-model="{{ .model }}" placeholder="{{ .placeholder }}" type="text" />
+    <input class="w-full border-2 text-primary bg-secondary py-2 px-3" x-model="{{ (printf " form.%s.%s" .section.name
+        .inputData.model) }}" placeholder="{{ .inputData.placeholder }}" type="text" />
 
-    {{ with .info }}
-        <a class="mt-1 text-label link" href="{{ . }}" target="_blank">Informations</a>
+    {{ if .inputData.link }}
+    <a class="mt-1 text-label link" href="{{ .inputData.link }}" target="_blank">Informations</a>
     {{ end }}
 
+
+    {{ if .inputData.information }}
+    <div x-data="{isOpen: false}">
+        <button @click="isOpen = !isOpen">
+            <span x-show="isOpen">Voir moins</span>
+            <span x-show="!isOpen">Voir plus</span>
+
+        </button>
+        <p x-show="isOpen">{{ .inputData.information }}</p>
+    </div>
+    {{ end }}
 </div>
