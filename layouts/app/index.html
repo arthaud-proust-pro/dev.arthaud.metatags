@@ -7,6 +7,8 @@
                 {{ partial "icons/arrow-left" }}
                 Retour
             </a>
+
+            {{ partial "app/view-switcher" }}
         </nav>
 
         <div class="overflow-y-auto flex flex-col p-8 gap-4">
@@ -27,12 +29,10 @@
         </div>
     </section>
 
-    <section class="relative overflow-y-auto p-8 text-base">
-        <div class="fixed top-0 right-0 p-8">
-            {{ partial "copyBtn" . }}
-        </div>
-        <pre class="overflow-x-scroll"><code class="language-html" x-html="html" id="code"></code></pre>
-    </section>
+
+    {{ partial "app/views/html-code" }}
+
+    {{ partial "app/views/preview" }}
 </main>
 
 {{ end }}

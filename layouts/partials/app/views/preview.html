@@ -1,0 +1,23 @@
+<section class="relative p-8 text-base flex flex-col gap-16" x-show="viewDisplayed === 'preview'">
+
+
+    <article>
+        <h3 class="text-h3 mb-4">Google</h3>
+        <section class="font-[arial] max-w-[60ch]">
+            <p class="text-[14px]" x-text="form.page.url"></p>
+            <p class="text-[20px] my-1" x-text="getTitleFromPageAndTitle(form)"></p>
+            <p class="text-[14px] leading-[1.58]" x-text="form.page.description"></p>
+        </section>
+    </article>
+
+
+    <article>
+        <h3 class="text-h3 mb-4">Carte</h3>
+        <section class="font-[arial] max-w-[600px]">
+            <img height="628" width="1200" :src="form.page.heroUrl" class="w-full">
+            <p class="text-[20px] my-1" x-text="getTitleFromPageAndTitle(form)"></p>
+            <p class="text-[14px] leading-[1.58]" x-text="form.page.description"></p>
+        </section>
+    </article>
+
+</section>

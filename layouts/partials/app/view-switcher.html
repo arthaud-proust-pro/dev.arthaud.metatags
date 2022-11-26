@@ -1,0 +1,14 @@
+<button class="relative grid grid-cols-2 text-cta text-primary border border-primary mix-blend-difference
+    after:absolute after:h-full after:w-1/2 after:bg-primary after:mix-blend-difference after:transition-transform after:duration-200"
+        :class="{ 'after:translate-x-full' : viewDisplayed === 'preview' }"
+        @click="toggleView()"
+>
+    <span class="px-5 py-3 in-row justify-center">
+        Html
+        {{ partial "icons/code" }}
+    </span>
+    <span class="px-5 py-3 in-row justify-center">
+        Visuel
+        {{ partial "icons/id-card" }}
+    </span>
+</button>

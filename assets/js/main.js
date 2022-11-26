@@ -34,11 +34,11 @@ function getGeneratedHtml(f) {
         <link rel="canonical" href="${f.page.url}" />
 
         <meta name="subject" content="${f.more.subject}">
-        <meta name="description" content="${f.page.desc}" />
+        <meta name="description" content="${f.page.description}" />
 
         <meta property="og:title" content="${f.page.title}" />
         <meta property="og:type" content="website" />
-        <meta property="og:description" content="${f.page.desc}" />
+        <meta property="og:description" content="${f.page.description}" />
         <meta property="og:site_name" content="${f.site.title}" />
         <meta property="og:url" content="${f.page.url}" />
         <meta property="og:locale" content="${f.site.lang}" />
@@ -47,7 +47,7 @@ function getGeneratedHtml(f) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="${f.page.url}">
         <meta name="twitter:title" content="${getTitleFromPageAndTitle(f)}" />
-        <meta name="twitter:description" content="${f.page.desc}" />
+        <meta name="twitter:description" content="${f.page.description}" />
         <meta name="twitter:image" content="${f.page.heroUrl}" />
 
         <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -64,28 +64,14 @@ function getGeneratedHtml(f) {
 
 document.addEventListener('alpine:init', () => {
     Alpine.data('appForm', () => ({
+        viewDisplayed: 'preview',
         copied: false,
         copiedTimeout: 2,
 
         form: {
-            site: {
-                title: '',
-                url: '',
-                lang: '',
-            },
-            page: {
-                title: '',
-                url: '',
-                desc: '',
-                heroUrl: '',
-            },
-            more: {
-                robots: '',
-                subject: '',
-                author: '',
-                owner: '',
-                themeColor: '',
-            }
+            site: {},
+            page: {},
+            more: {}
         },
 
 
@@ -97,6 +83,11 @@ document.addEventListener('alpine:init', () => {
             this.$watch('form', () => {
                 this.html = hljs.highlight(getGeneratedHtml(this.form), {language: 'html'}).value ;
             })
+        },
+
+        toggleView()
+        {
+          this.viewDisplayed = this.viewDisplayed === "htmlCode" ? "preview" : "htmlCode";
         },
 
         copyTimeout()
