@@ -2,8 +2,14 @@
 
     <label class="text-label">{{ .inputData.label }}</label>
 
-    <input class="w-full border text-body text-primary bg-secondary py-2 px-3" x-model="{{ (printf " form.%s.%s" .section.name
-        .inputData.model) }}" placeholder="{{ .inputData.placeholder }}" type="text" />
+    {{ $model := (printf "form.%s.%s" .section.name .inputData.model) }}
+    <input
+        class="w-full border text-body text-primary bg-secondary py-2 px-3"
+        x-init="{{ $model }} = '{{ .inputData.placeholder }}'"
+        @keyup="{{ $model }} = $event.target.value == '' ? '{{ .inputData.placeholder }}' : $event.target.value"
+        placeholder="{{ .inputData.placeholder }}"
+        type="text"
+    />
 
     {{ if .inputData.information }}
     <div x-data="{isOpen: false}">
@@ -17,6 +23,6 @@
     {{ end }}
 
     {{ if .inputData.link }}
-    <a class="mt-1 text-body link" href="{{ .inputData.link }}" target="_blank">Plus d'informations</a>
+    {{ partial "external-link" (dict "text" "Plus d'informations" "href" .inputData.link "class" "mt-2" ) }}
     {{ end }}
 </div>

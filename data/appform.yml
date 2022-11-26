@@ -20,7 +20,7 @@ sections:
       - model: url
         label: Url
         placeholder: 'https://metatags.arthaud.dev/app'
-      - model: desc
+      - model: description
         label: Description
         placeholder: 'Créez simplement vos balises Meta. Entrez les informations de votre site et récupérez le code html'
       - model: heroUrl

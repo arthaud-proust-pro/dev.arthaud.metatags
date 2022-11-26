@@ -1,3 +1,23 @@
-<section class="relative overflow-y-auto p-8 text-base" x-show="viewDisplayed === 'preview'">
-    test
+<section class="relative overflow-y-auto p-8 text-base flex flex-col gap-16" x-show="viewDisplayed === 'preview'">
+
+
+    <article>
+        <h3 class="text-h3 mb-4">Google</h3>
+        <section class="font-[arial] max-w-[60ch]">
+            <p class="text-[14px]" x-text="form.page.url"></p>
+            <p class="text-[20px] my-1" x-text="form.page.title"></p>
+            <p class="text-[14px] leading-[1.58]" x-text="form.page.description"></p>
+        </section>
+    </article>
+
+
+    <article>
+        <h3 class="text-h3 mb-4">Sms</h3>
+        <section class="font-[arial] max-w-[60ch]">
+            <p class="text-[14px]" x-text="form.page.url"></p>
+            <p class="text-[20px] my-1" x-text="form.page.title"></p>
+            <p class="text-[14px] leading-[1.58]" x-text="form.page.description"></p>
+        </section>
+    </article>
+
 </section>
