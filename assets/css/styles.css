@@ -64,6 +64,6 @@
     }
 
     .link {
-        @apply text-cta underline underline-offset-4 decoration-1;
+        @apply text-cta underline underline-offset-4 decoration-1 hover:animate-pulse focus-visible:animate-pulse;
     }
 }
