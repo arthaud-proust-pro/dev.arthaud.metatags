@@ -1,4 +1,4 @@
-<section class="relative overflow-y-auto p-8 text-base flex flex-col gap-16" x-show="viewDisplayed === 'preview'">
+<section class="relative p-8 text-base flex flex-col gap-16" x-show="viewDisplayed === 'preview'">
 
 
     <article>
@@ -12,9 +12,9 @@
 
 
     <article>
-        <h3 class="text-h3 mb-4">Sms</h3>
-        <section class="font-[arial] max-w-[60ch]">
-            <p class="text-[14px]" x-text="form.page.url"></p>
+        <h3 class="text-h3 mb-4">Carte</h3>
+        <section class="font-[arial] max-w-[600px]">
+            <img height="628" width="1200" :src="form.page.heroUrl" class="w-full">
             <p class="text-[20px] my-1" x-text="form.page.title"></p>
             <p class="text-[14px] leading-[1.58]" x-text="form.page.description"></p>
         </section>
