@@ -5,6 +5,8 @@ sections:
       - model: title
         label: Titre
         placeholder: "Use Metatags"
+        information: >
+          Pas plus de 110 charactères
       - model: url
         label: Url
         placeholder: 'https://metatags.arthaud.dev/'
@@ -16,13 +18,14 @@ sections:
     inputs:
       - model: title
         label: Nom
-        placeholder: 'Générer des meta-tags'
+        placeholder: 'Créez vos balises meta et améliorez votre SEO'
       - model: url
         label: Url
         placeholder: 'https://metatags.arthaud.dev/app'
       - model: description
         label: Description
-        placeholder: 'Créez simplement vos balises Meta. Entrez les informations de votre site et récupérez le code html'
+        type: textarea
+        placeholder: 'Complétez les champs et copiez le code html pour ajouter une prévisualisation à votre site.'
       - model: heroUrl
         label: "Url d'image de prévisualisation"
         placeholder: 'https://metatags.arthaud.dev/sprites/hero-min.jpg'

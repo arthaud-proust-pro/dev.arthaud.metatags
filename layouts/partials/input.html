@@ -1,8 +1,17 @@
-<div class="flex flex-col items-start w-full">
+<div class="flex flex-col items-start w-full text-body">
 
     <label class="text-label">{{ .inputData.label }}</label>
 
     {{ $model := (printf "form.%s.%s" .section.name .inputData.model) }}
+    {{ if (eq .inputData.type "textarea") }}
+    <textarea
+            class="w-full border text-body text-primary bg-secondary py-2 px-3 resize-none"
+            x-init="{{ $model }} = '{{ .inputData.placeholder }}'"
+            @keyup="{{ $model }} = $event.target.value == '' ? '{{ .inputData.placeholder }}' : $event.target.value"
+            placeholder="{{ .inputData.placeholder }}"
+            rows="2"
+    ></textarea>
+    {{ else }}
     <input
         class="w-full border text-body text-primary bg-secondary py-2 px-3"
         x-init="{{ $model }} = '{{ .inputData.placeholder }}'"
@@ -10,13 +19,15 @@
         placeholder="{{ .inputData.placeholder }}"
         type="text"
     />
+    {{ end }}
 
     {{ if .inputData.information }}
-    <div x-data="{isOpen: false}">
-        <button @click="isOpen = !isOpen">
-            <span x-show="isOpen">Voir moins</span>
-            <span x-show="!isOpen">Voir plus</span>
-
+    <div x-data="{isOpen: false}" class="mt-2">
+        <button @click="isOpen = !isOpen" class="in-row gap-1">
+            Détails
+            <span class="transition-transform duration-200" :class="{ 'rotate-180' : isOpen}">
+                {{ partial "icons/chevron-down" }}
+            </span>
         </button>
         <p x-show="isOpen">{{ .inputData.information }}</p>
     </div>
