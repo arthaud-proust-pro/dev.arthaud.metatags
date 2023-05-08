@@ -9,6 +9,8 @@ sections:
           Pas plus de 110 charactères
       - model: url
         label: Url
+        information: >
+          Url racine du site, ex : example.com, pas example.com/about
         placeholder: 'https://metatags.arthaud.dev/'
       - model: lang
         label: Langue

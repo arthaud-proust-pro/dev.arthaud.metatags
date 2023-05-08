@@ -27,8 +27,6 @@ function getGeneratedHtml(f) {
 
         <meta name="author" content="${f.more.author}">
         <meta name="owner" content="${f.more.owner}">
-        <meta name="language" content="${f.site.lang}">
-        <meta http-equiv="content-language" content="${f.site.lang}">
 
         <meta name="url" content="${f.site.url}">
         <meta name="identifier-URL" content="${f.site.url}">
